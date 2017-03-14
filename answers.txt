@@ -1,0 +1,52 @@
+1.
+select avg(Milliseconds)
+from Track;
+
+2.
+select count(*)
+from Invoice
+where BillingCountry = 'USA';
+
+3.
+select FirstName
+from Customer
+where FirstName like '%a%';
+
+4.
+select Name, Milliseconds
+from Track
+order by Milliseconds desc
+limit 10;
+
+5.
+select Name, Milliseconds
+from Track
+order by Milliseconds asc
+limit 20;
+
+6.
+select FirstName, LastName, State
+from customer
+where state = 'CA'or 'WA';
+
+7.
+select FirstName, LastName, State
+from customer
+where state in ('CA', 'WA', 'UT', 'FL', 'AZ');
+
+8.
+insert into Artist (Name)
+Values ('Rick James');
+
+select Name
+from Artist
+where name = 'Rick James';
+
+9.
+insert into Customer (FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId)
+values ('Bill', 'Mcfakeson', 'Fake Inc', '123 Fake St.', 'Salt Lake City', 'UT', 'USA', '84101', '801.123.4567', '123.4567.7890', 'fake@fake.com', null);
+
+10.
+select Name
+from Playlist
+where Name like 'Classical%';
